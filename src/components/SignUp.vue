@@ -3,18 +3,42 @@
         <div class="container">
             <h1>Sign Up</h1>
             <div class="register">
-                <input type="text" placeholder="Enter Nane" />
-                <input type="text" placeholder="Enter Email" />
-                <input type="text" placeholder="Enter Password" />
-                <button>Sign up</button>
+                <input type="text" v-model="name" placeholder="Enter Nane" />
+                <input type="text" v-model="email" placeholder="Enter Email" />
+                <input type="text" v-model="password" placeholder="Enter Password" />
+                <button v-on:click="signUp">Sign up</button>
             </div>
         </div>
     </main>
 </template>
 <script>
 
+import axios from 'axios'
+
 export default {
-    name: 'SignUp'
+    name: 'SignUp',
+    data() {
+        return {
+            name: '',
+            email: '',
+            password: ''
+        }
+    },
+    methods: {
+        async signUp() {
+            let result = await axios.post("http://localhost:3000/users", {
+                email: this.email,
+                name: this.name,
+                password: this.password
+            });
+            
+            console.warn(result);
+            if(result.status==201) {
+                alert("Sign up successfully!")
+                localStorage.setItem("user-info", JSON.stringify(result.data))
+            }
+        }
+    }
 }
 </script>
 
@@ -48,6 +72,4 @@ export default {
     color: white;
     cursor: pointer;
 }
-
-
 </style>
