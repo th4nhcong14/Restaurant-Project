@@ -17,6 +17,12 @@
       "name": "cong thanh",
       "password": "123",
       "id": 3
+    },
+    {
+      "email": "sad",
+      "name": "sad",
+      "password": "sad",
+      "id": 4
     }
   ]
 }
