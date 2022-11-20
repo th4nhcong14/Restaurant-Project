@@ -1,6 +1,7 @@
 <template>
     <main>
         <div class="container">
+            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/450/450166.png?fbclid=IwAR29G-fcSl8QGWBDzfD2EDZXiHeK0Vq2L9-pZ8xeFu5Lm-uHH4-p0nuJxvk">
             <h1>Sign Up</h1>
             <div class="register">
                 <input type="text" v-model="name" placeholder="Enter Nane" />
@@ -44,14 +45,9 @@ export default {
 </script>
 
 <style>
-.logo {
+.container .logo {
     width: 100px;
     height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-    background-image: url('https://img.favpng.com/6/15/10/food-restaurant-breakfast-cuisine-cook-png-favpng-hEwhUh9EMqX2uLXZsvEi97G0V.jpg');
-    /* padding: 0 200px 200px 200px; */
-    margin: 0 auto;
 }
 
 .register input {
