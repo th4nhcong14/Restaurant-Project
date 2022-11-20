@@ -1,0 +1,16 @@
+{
+  "user": [
+    {
+      "name": "thanh cong",
+      "email": "cong@gmail.com",
+      "password": "cong@123",
+      "id": 1
+    },
+    {
+      "name": "huy hoang",
+      "email": "hoangg@gmail.com",
+      "password": "hoang@123",
+      "id": 2
+    }
+  ]
+}
