@@ -8,6 +8,9 @@
                 <input type="text" v-model="email" placeholder="Enter Email" />
                 <input type="text" v-model="password" placeholder="Enter Password" />
                 <button v-on:click="signUp">Sign up</button>
+                <p>
+                    <router-link to="/login">Login</router-link>
+                </p>
             </div>
         </div>
     </main>
@@ -40,6 +43,14 @@ export default {
                 this.$router.push({name:'Home'})
             }
         }
+    },
+    mounted() {
+        let user = localStorage.getItem('user-info');
+        if(!user) {
+            this.$router.push ({
+                name: 'Home'
+            })
+        }
     }
 }
 </script>
@@ -69,4 +80,5 @@ export default {
     color: white;
     cursor: pointer;
 }
+
 </style>
