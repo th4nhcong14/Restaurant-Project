@@ -1,7 +1,8 @@
 <template>
     <main>
         <div class="container">
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/450/450166.png?fbclid=IwAR29G-fcSl8QGWBDzfD2EDZXiHeK0Vq2L9-pZ8xeFu5Lm-uHH4-p0nuJxvk">
+            <img class="logo"
+                src="https://cdn-icons-png.flaticon.com/512/450/450166.png?fbclid=IwAR29G-fcSl8QGWBDzfD2EDZXiHeK0Vq2L9-pZ8xeFu5Lm-uHH4-p0nuJxvk">
             <h1>Sign Up</h1>
             <div class="register">
                 <input type="text" v-model="name" placeholder="Enter Nane" />
@@ -35,19 +36,19 @@ export default {
                 name: this.name,
                 password: this.password
             });
-            
+
             console.warn(result);
-            if(result.status==201) {
+            if (result.status == 201) {
                 alert("Sign up successfully!")
                 localStorage.setItem("user-info", JSON.stringify(result.data))
-                this.$router.push({name:'Home'})
+                this.$router.push({ name: 'Home' })
             }
         }
     },
     mounted() {
         let user = localStorage.getItem('user-info');
-        if(!user) {
-            this.$router.push ({
+        if (!user) {
+            this.$router.push({
                 name: 'Home'
             })
         }
@@ -91,3 +92,4 @@ html {
 }
 
 </style>
+
