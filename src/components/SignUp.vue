@@ -81,4 +81,13 @@ export default {
     cursor: pointer;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://img.freepik.com/free-photo/modern-luxury-authentic-dining-room-interior-design-with-blank-picture-frame_53876-128700.jpg?w=1060&t=st=1668975776~exp=1668976376~hmac=a61de9a80f941d786644d7e418a8016304b94637caa7cfc7ac0f125e3ae4d477");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 </style>
