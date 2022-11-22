@@ -1,9 +1,11 @@
 <template>
     <div class="nav">
-        <router-link to="/">Home</router-link>
-        <router-link to="/add">Add</router-link>
+        <router-link to="/">Product</router-link>
+        <router-link to="/add">Add Product</router-link>
+        <a href="/user">Users</a>
+        <a href="/adduser">Add Users</a>
         <a v-on:click="logout" href="#">Logout</a>
-        <h1 id="hello">Hello {{name}}</h1>
+        <h1 id="hello">Hello {{name}}, welcome to admin page!</h1>
     </div>
 </template>
 <script>

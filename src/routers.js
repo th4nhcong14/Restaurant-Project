@@ -4,6 +4,10 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Login from './components/Login.vue'
 import Add from './components/Add.vue'
 import Update from './components/Update.vue'
+import User from './components/User.vue'
+import addUser from './components/addUser.vue'
+import UpdateUser from './components/UpdateUser.vue'
+
 
 const routes= [
     {
@@ -34,6 +38,24 @@ const routes= [
         name: 'Update',
         component: Update,
         path: '/update/:id',
+    },
+
+    {
+        name: 'User',
+        component: User,
+        path: '/user'
+    },
+
+    {
+        name: 'addUser',
+        component: addUser,
+        path: '/adduser'
+    },
+
+    {
+        name: 'UpdateUser',
+        component: UpdateUser,
+        path: '/updateuser/:id'
     }
 ];
 

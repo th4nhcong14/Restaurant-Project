@@ -2,8 +2,9 @@
 <template>
     <Header />
     <div class="add">
+        <h1>Product</h1>
         <table border="1">
-            <tr>
+            <tr>             
                 <td>Id</td>
                 <td>Name</td>
                 <td>Price</td>
@@ -16,16 +17,20 @@
                 <td>
                     <router-link :to="'/update/'+item.id" class="update-btn">Update</router-link>
                 </td>
+                <td>
+                    <button v-on:click="deleteProduct" class="delete-btn">Delete</button>
+                </td>
 
             </tr>
         </table>
+        
         <div class="add-form">
             <h1>Add Product</h1>
             <input type="text" v-model="name" placeholder="Enter product name">
             <input type="text" v-model="price" placeholder="Enter product price">
             <input type="text" v-model="code" placeholder="Enter product code">
-            <button v-on:click="addProduct" class="btn">Add</button>
-
+            <button v-on:click="addProduct" class="add-product">Add</button>
+            
         </div>
 
     </div>
@@ -57,11 +62,11 @@ export default {
                 price: this.price,
                 code: this.code
             });
-
             console.warn(result);
             if (result.status == 201) {
                 alert("Add product successfully!")
                 localStorage.setItem("product-info", JSON.stringify(result.data))
+                this.$router.push({name:'Home'});
             }
         }
     },
@@ -90,7 +95,7 @@ export default {
     width: 300px;
     height: 40px;
     padding-left: 20px;
-    /* display: block; */
+    display: block;
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -115,7 +120,4 @@ export default {
     font-weight: 700;
 }
 
-.add-form {
-    float: right;
-}
 </style>
