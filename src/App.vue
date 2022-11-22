@@ -17,7 +17,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 .container .logo {
@@ -44,4 +48,49 @@ export default {
     color: white;
     cursor: pointer;
 }
+
+.btn {
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+}
+
+.nav {
+  background-color: black;
+  overflow: hidden;
+}
+
+.nav a {
+  float: left;
+  color: aliceblue;
+  padding: 15px;
+  text-align: center;
+  font-size: 17px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.nav a:hover {
+  background: white;
+  color: black;
+}
+
+#hello {
+  float: right;
+  margin-right: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+td {
+  width: 100px;
+  height: 50px;
+  color: black;
+}
+
+table {
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
 </style>

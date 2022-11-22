@@ -17,42 +17,14 @@
       "name": "cong thanh",
       "password": "123",
       "id": 3
-    },
+    }
+  ],
+  "list-product": [
     {
-      "email": "cong@gmail.com",
-      "name": "thanh cong",
-      "password": "cong@123",
-      "id": 4
-    },
-    {
-      "email": "sad",
-      "name": "sad",
-      "password": "sad",
-      "id": 5
-    },
-    {
-      "email": "asd",
-      "name": "sad",
-      "password": "asd",
-      "id": 6
-    },
-    {
-      "email": "sa",
-      "name": "fas",
-      "password": "s",
-      "id": 7
-    },
-    {
-      "email": "dtc@gmail.com",
-      "name": "dtc",
-      "password": "dtc123",
-      "id": 8
-    },
-    {
-      "email": "sad",
-      "name": "asd",
-      "password": "asd",
-      "id": 9
+      "name": "Hoddie",
+      "price": "300,000 vnd",
+      "code": "C_HD",
+      "id": 1
     }
   ]
 }

@@ -8,9 +8,9 @@
                 <input type="text" v-model="name" placeholder="Enter Nane" />
                 <input type="text" v-model="email" placeholder="Enter Email" />
                 <input type="text" v-model="password" placeholder="Enter Password" />
-                <button v-on:click="signUp">Sign up</button>
+                <button v-on:click="signUp" class="btn">Sign up</button>
                 <p>
-                    <router-link to="/login">Login</router-link>
+                    <router-link to="/login" class="btn">Login</router-link>
                 </p>
             </div>
         </div>

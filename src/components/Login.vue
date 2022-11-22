@@ -9,8 +9,8 @@
                 <input type="text" v-model="email" placeholder="Enter Email" />
                 <input type="text" v-model="password" placeholder="Enter Password" />
                 <button v-on:click="login">Login</button>
-                <p>
-                    <router-link to="/sign-up">Sign up</router-link>
+                <p class="btn">
+                    <router-link to="/sign-up" class="btn">Sign up</router-link>
                 </p>
             </div>
         </div>
@@ -42,6 +42,9 @@ export default {
                 this.$router.push({ name: 'Home' })
                 alert("Login successfully!")
             }
+        else (
+            alert("Login failed!")
+        )
         console.warn(result)
     }
         
