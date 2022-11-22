@@ -89,6 +89,9 @@ td {
 }
 
 table {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 15px;
   border: 2px solid black;
 }
