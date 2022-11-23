@@ -6,6 +6,7 @@
      <input type="text" v-model="listProduct.name" placeholder="Enter user name">
      <input type="text" v-model="listProduct.email" placeholder="Enter user email">
      <input type="text" v-model="listProduct.password" placeholder="Enter user password">
+     <input type="text" v-model="listProduct.phonenumber" placeholder="Enter user phonenumber">
      <button v-on:click="updateUser" class="btn">Update</button>
     </div>
 </template>
@@ -36,7 +37,8 @@ export default {
             {
                 name:this.listProduct.name,
                 email:this.listProduct.email,
-                password:this.listProduct.password
+                password:this.listProduct.password,
+                phonenumber:this.listProduct.phonenumber
             });
                        
             if(result.status==200) {

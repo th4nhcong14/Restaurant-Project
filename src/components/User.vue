@@ -1,18 +1,20 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
     <Header />
-    <h1>User</h1>
+    <h1 style="font-weight: 1000;">User</h1>
     <table border="1">
         <tr>
             <td>Name</td>
             <td>Email</td>
             <td>Password</td>
+            <td>Phone Number</td>
         </tr>
 
         <tr v-for="item in listproduct" :key="item.id">
             <td>{{ item.name }}</td>
             <td>{{ item.email }}</td>
             <td>{{ item.password }}</td>
+            <td>{{ item.phonenumber }}</td>
             <td>
                 <router-link :to="'/updateuser/' + item.id" class="update-btn">Update</router-link>
             </td>

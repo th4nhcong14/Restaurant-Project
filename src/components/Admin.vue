@@ -1,18 +1,20 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
     <Header />
-    <h1>Product</h1>
+    <h1 style="font-weight: 1000;">Product</h1>
     <table border="1">
         <tr>
             <td>Id</td>
             <td>Name</td>
             <td>Price</td>
+            <td>Image</td>
         </tr>
 
         <tr v-for="item in listproduct" :key="item.id">
             <td>{{ item.code }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.price }}</td>
+            <td>{{ item.image }}</td>
             <td>
                 <router-link :to="'/update/' + item.id" class="update-btn">Update</router-link>
             </td>
@@ -29,7 +31,7 @@ import Header from './Header.vue'
 import axios from 'axios';
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Home',
+    name: 'Admin',
     data() {
         return {
             name: '',
@@ -56,7 +58,7 @@ export default {
         this.name = JSON.parse(user).name;
         if (!user) {
             this.$router.push({
-                name: 'Home'
+                name: 'Admin'
             })
         }
         let result = await axios.get("http://localhost:3000/list-product");
@@ -69,7 +71,7 @@ export default {
         this.name = JSON.parse(user).name;
         if (!user) {
             this.$router.push({
-                name: 'Home'
+                name: 'Admin'
             })
         }
         let result = await axios.get("http://localhost:3000/list-product");

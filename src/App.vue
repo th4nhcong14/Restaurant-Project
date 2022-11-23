@@ -95,4 +95,8 @@ table {
 
 }
 
+.logo {
+  margin-top: 100px;
+}
+
 </style>

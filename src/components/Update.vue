@@ -6,6 +6,7 @@
      <input type="text" v-model="listProduct.name" placeholder="Enter product name">
      <input type="text" v-model="listProduct.price" placeholder="Enter product price">
      <input type="text" v-model="listProduct.code" placeholder="Enter product code">
+     <input type="text" v-model="listProduct.image">
      <button v-on:click="updateProduct" class="btn">Update</button>
     </div>
 </template>
@@ -25,7 +26,8 @@ export default {
             listProduct: {
                 name: '',
                 price: '',
-                code: ''
+                code: '',
+                image:''
             }
         }
     },
@@ -36,12 +38,13 @@ export default {
             {
                 name:this.listProduct.name,
                 price:this.listProduct.price,
-                code:this.listProduct.code
+                code:this.listProduct.code,
+                image:this.listProduct.image
             });
                        
             if(result.status==200) {
                 alert("Update product successfully!")
-                this.$router.push({name:'Home'});
+                this.$router.push({name:'Admin'});
             }    
 
         }

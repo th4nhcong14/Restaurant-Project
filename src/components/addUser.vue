@@ -1,18 +1,20 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
     <Header />
-    <h1>User</h1>
+    <h1 style="font-weight: 1000;">User</h1>
     <table border="1">
         <tr>
             <td>Name</td>
             <td>Email</td>
             <td>Password</td>
+            <td>Phone Number</td>
         </tr>
 
         <tr v-for="item in listuser" :key="item.id">
             <td>{{ item.name }}</td>
             <td>{{ item.email }}</td>
             <td>{{ item.password }}</td>
+            <td>{{ item.phonenumber }}</td>
             <td>
                 <router-link :to="'/updateuser/' + item.id" class="update-btn">Update</router-link>
             </td>
@@ -23,10 +25,11 @@
     </table>
 
     <div class="add-form">
-        <h1>Add Product</h1>
+        <h1 style="font-weight: 1000;">Add User</h1>
         <input type="text" v-model="name" placeholder="Enter user name">
         <input type="text" v-model="email" placeholder="Enter user email">
         <input type="text" v-model="password" placeholder="Enter user password">
+        <input type="text" v-model="phonenumber" placeholder="Enter user phone number">
         <button v-on:click="addUsers" class="add-product">Add</button>
 
     </div>
@@ -55,7 +58,8 @@ export default {
         let result = await axios.post("http://localhost:3000/users", {
             email: this.email,
             name: this.name,
-            password: this.password
+            password: this.password,
+            phonenumber: this.phonenumber
         });
 
         console.warn(result);
@@ -77,7 +81,7 @@ export default {
         }
     },
 
-    async loadData() {
+    async load() {
         let user = localStorage.getItem('user-info');
         this.name = JSON.parse(user).name;
         if (!user) {

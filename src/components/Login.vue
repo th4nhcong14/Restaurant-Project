@@ -2,7 +2,7 @@
     <main>
         <div class="container">
             <img class="logo"
-                src="https://cdn-icons-png.flaticon.com/512/450/450166.png?fbclid=IwAR29G-fcSl8QGWBDzfD2EDZXiHeK0Vq2L9-pZ8xeFu5Lm-uHH4-p0nuJxvk">
+                src="https://banner2.cleanpng.com/20180323/gbw/kisspng-iphone-6-apple-store-logo-apple-5ab48ff92b47e2.9339799415217827771773.jpg">
             <h1>Login</h1>
             <div class="register">
                 <!-- <input type="text" v-model="name" placeholder="Enter Nane" /> -->
@@ -39,7 +39,7 @@ export default {
 
         if (result.status==200 && result.data.length>0) {        
                 localStorage.setItem("user-info", JSON.stringify(result.data[0]))
-                this.$router.push({ name: 'Home' })
+                this.$router.push({ name: 'Admin' })
                 alert("Login successfully!")
             }
         else (
@@ -54,7 +54,7 @@ export default {
         let user = localStorage.getItem('user-info');
         if (user) {
             this.$router.push({
-                name: 'Home'
+                name: 'Admin'
             })
         }
     }

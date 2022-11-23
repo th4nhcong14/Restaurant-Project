@@ -4,39 +4,51 @@
       "email": "cong@gmail.com",
       "name": "thanh cong",
       "password": "cong@123",
+      "phonenumber": "0866630733",
       "id": 1
     },
     {
-      "email": "hoang@gmail.com",
       "name": "huy hoangg",
+      "email": "hoang@gmail.com",
       "password": "123",
+      "phonenumber": "45564564",
       "id": 2
     },
     {
-      "name": "cong thanh",
-      "email": "thanh@gmail.com",
-      "password": "12345",
-      "id": 3
+      "email": "ducong45@gmail.com",
+      "name": "duthanhcong",
+      "password": "cong123",
+      "id": 4
+    },
+    {
+      "email": "dtc@gmail.com",
+      "name": "dtc",
+      "password": "123",
+      "phonenumber": "0866630733",
+      "id": 5
     }
   ],
   "list-product": [
     {
       "name": "Hoddie",
       "price": "300,000 vnd",
-      "code": "C_HD",
+      "code": "C_H",
+      "image": "edited",
       "id": 1
     },
     {
-      "name": "Polo",
-      "price": "200000 vnd",
-      "code": "PL-1",
-      "id": 2
+      "name": "sad",
+      "price": "sadsda",
+      "code": "sad",
+      "image": "sadsad",
+      "id": 4
     },
     {
-      "name": "Gucci",
-      "price": "100000 vnd",
-      "code": "GC",
-      "id": 3
+      "name": "sad",
+      "price": "sfaffsa",
+      "code": "saf",
+      "image": "sfa",
+      "id": 5
     }
   ]
 }

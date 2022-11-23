@@ -2,7 +2,7 @@
     <main>
         <div class="container">
             <img class="logo"
-                src="https://cdn-icons-png.flaticon.com/512/450/450166.png?fbclid=IwAR29G-fcSl8QGWBDzfD2EDZXiHeK0Vq2L9-pZ8xeFu5Lm-uHH4-p0nuJxvk">
+                src="https://cdn-icons-png.flaticon.com/512/731/731985.png">
             <h1>Sign Up</h1>
             <div class="register">
                 <input type="text" v-model="name" placeholder="Enter Nane" />
@@ -41,7 +41,7 @@ export default {
             if (result.status == 201) {
                 alert("Sign up successfully!")
                 localStorage.setItem("user-info", JSON.stringify(result.data))
-                this.$router.push({ name: 'Home' })
+                this.$router.push({ name: 'Admin' })
             }
         }
     },
@@ -49,7 +49,7 @@ export default {
         let user = localStorage.getItem('user-info');
         if (user) {
             this.$router.push({
-                name: 'Home'
+                name: 'Admin'
             })
         }
     }
@@ -85,7 +85,7 @@ export default {
 html {
     width: 100%;
     height: 100%;
-    background-image: url("https://img.freepik.com/free-photo/modern-luxury-authentic-dining-room-interior-design-with-blank-picture-frame_53876-128700.jpg?w=1060&t=st=1668975776~exp=1668976376~hmac=a61de9a80f941d786644d7e418a8016304b94637caa7cfc7ac0f125e3ae4d477");
+    /* background-image: url(""); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
