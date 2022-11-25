@@ -30,25 +30,18 @@
   ],
   "list-product": [
     {
-      "name": "Hoddie",
-      "price": "300,000 vnd",
-      "code": "C_H",
-      "image": "edited",
+      "name": "Iphone 14",
+      "price": "240000000",
+      "code": "IP14",
+      "image": "https://cdn2.cellphones.com.vn/358x/media/catalog/product/t/_/t_m_12.png",
       "id": 1
     },
     {
-      "name": "sad",
-      "price": "sadsda",
-      "code": "sad",
-      "image": "sadsad",
-      "id": 4
-    },
-    {
-      "name": "sad",
-      "price": "sfaffsa",
-      "code": "saf",
-      "image": "sfa",
-      "id": 5
+      "name": "Iphone 13",
+      "price": "2000000000",
+      "code": "IP13",
+      "image": "",
+      "id": 2
     }
   ]
 }

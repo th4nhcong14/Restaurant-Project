@@ -5,7 +5,8 @@
         <a href="/user">Users</a>
         <a href="/adduser">Add Users</a>
         <a v-on:click="logout" href="#">Logout</a>
-        <a v-on:click="shop" href="#">Shop</a>
+        <!-- <a v-on:click="shop" href="#">Shop</a> -->
+        <a href="/store">Shop</a>
         <h1 id="hello">Hello {{name}}, welcome to admin page!</h1>
     </div>
 </template>

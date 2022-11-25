@@ -64,6 +64,7 @@ export default {
         let result = await axios.get("http://localhost:3000/list-product");
         console.warn(result)
         this.listproduct = result.data;
+        
     },
 
     async mounted() {
