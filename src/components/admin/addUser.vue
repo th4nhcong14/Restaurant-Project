@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
     <Header />
-    <h1 style="font-weight: 1000;">User</h1>
-    <table border="1">
+    <!-- <h1 style="font-weight: 1000;">User</h1> -->
+    <!-- <table border="1">
         <tr>
             <td>Name</td>
             <td>Email</td>
@@ -22,13 +22,13 @@
                 <button v-on:click="deleteUser(item.id)" class="delete-btn">Delete</button>
             </td>
         </tr>
-    </table>
+    </table> -->
 
-    <div class="add-form">
+    <div class="container">
         <h1 style="font-weight: 1000;">Add User</h1>
         <input type="text" v-model="name" placeholder="Enter user name">
-        <input type="text" v-model="email" placeholder="Enter user email">
-        <input type="text" v-model="password" placeholder="Enter user password">
+        <input type="email" v-model="email" placeholder="Enter user email">
+        <input type="password" v-model="password" placeholder="Enter user password">
         <input type="text" v-model="phonenumber" placeholder="Enter user phone number">
         <button v-on:click="addUsers" class="add-product">Add</button>
 

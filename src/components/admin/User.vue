@@ -1,28 +1,30 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
     <Header />
-    <h1 style="font-weight: 1000;">Product</h1>
+    <h1 style="font-weight: 1000;">Staff</h1>
     <table border="1">
         <tr>
-            <td>Id</td>
             <td>Name</td>
-            <td>Price</td>
-            <td>Image</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Phone Number</td>
         </tr>
 
         <tr v-for="item in listproduct" :key="item.id">
-            <td>{{ item.code }}</td>
             <td>{{ item.name }}</td>
-            <td>{{ item.price }}</td>
-            <td>{{ item.image }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.password }}</td>
+            <td>{{ item.phonenumber }}</td>
             <td>
-                <router-link :to="'/update/' + item.id" class="update-btn">Update</router-link>
+                <router-link :to="'/updateuser/' + item.id" class="update-btn">Update</router-link>
             </td>
             <td>
-                <button v-on:click="deleteProduct(item.id)" class="delete-btn">Delete</button>
+                <button v-on:click="deleteUser(item.id)" class="delete-btn">Delete</button>
             </td>
         </tr>
     </table>
+
+    <router-link :to="'/adduser'" class="update-btn">Add Staff</router-link>
 
 </template>
 
@@ -31,7 +33,7 @@ import Header from './Header.vue'
 import axios from 'axios';
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-    name: 'Admin',
+    name: 'User',
     data() {
         return {
             name: '',
@@ -44,38 +46,37 @@ export default {
         Header
     },
     methods: {
-        async deleteProduct(id) {
-            let result = await axios.delete("http://localhost:3000/list-product/"+id);
+        async deleteUser(id) {
+            let result = await axios.delete("http://localhost:3000/users/"+id);
             console.warn(result)
             if(result.status==200) {
-                alert("Delete product successfully!")
-                this.mounted()
+                alert("Delete user successfully!")
+                location.reload(); 
             }   
         }
     },
     async loadData() {
         let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user).name;
+        this.name = JSON.parse(user).name
         if (!user) {
             this.$router.push({
-                name: 'Admin'
+                name: 'User'
             })
         }
-        let result = await axios.get("http://localhost:3000/list-product");
+        let result = await axios.get("http://localhost:3000/users");
         console.warn(result)
         this.listproduct = result.data;
-        
     },
 
     async mounted() {
         let user = localStorage.getItem('user-info');
-        this.name = JSON.parse(user).name;
+        this.name = JSON.parse(user).name
         if (!user) {
             this.$router.push({
-                name: 'Admin'
+                name: 'User'
             })
         }
-        let result = await axios.get("http://localhost:3000/list-product");
+        let result = await axios.get("http://localhost:3000/users");
         this.listproduct = result.data;
     },
 

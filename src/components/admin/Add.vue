@@ -1,41 +1,15 @@
 <!-- eslint-disable vue/no-unused-components -->
 <template>
     <Header />
-    <div class="add">
-        <h1 style="font-weight: 1000;">Product</h1>
-        <table border="1">
-            <tr>             
-                <td>Id</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Image</td>
-            </tr>
-
-            <tr v-for="item in listproduct" :key="item.id">
-                <td>{{ item.code }}</td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.price }}</td>
-                <td>{{ item.image }}</td>
-                <td>
-                    <router-link :to="'/update/'+item.id" class="update-btn">Update</router-link>
-                </td>
-                <td>
-                    <button v-on:click="deleteProduct" class="delete-btn">Delete</button>
-                </td>
-
-            </tr>
-        </table>
-        
+    <div class="add"> 
         <div class="add-form">
-            <h1 style="font-weight: 1000;">Add Product</h1>
+            <h1 style="font-weight: 1000;">Add Iphone</h1>
             <input type="text" v-model="name" placeholder="Enter product name">
             <input type="text" v-model="price" placeholder="Enter product price">
             <input type="text" v-model="code" placeholder="Enter product code">
-            <input type="text" v-model="image" placeholder="Enter image source">
-            <button v-on:click="addProduct" class="add-product">Add</button>
-            
+            <!-- <input type="file" v-on:click="image"> -->
+            <button v-on:click="addProduct" class="add-product">Add</button>   
         </div>
-
     </div>
 </template>
 
@@ -60,12 +34,22 @@ export default {
         }
     },
     methods: {
+        async deleteProduct(id) {
+            let result = await axios.delete("http://localhost:3000/product-iphone/"+id);
+            console.warn(result)
+            if(result.status==200) {
+                alert("Delete product successfully!")
+                localStorage.setItem("product-info", JSON.stringify(result.data))
+                this.$router.push({name:'Admin'});
+            }   
+        },
+
         async addProduct() {
-            let result = await axios.post("http://localhost:3000/list-product", {
+            let result = await axios.post("http://localhost:3000/product-iphone", {
                 name: this.name,
                 price: this.price,
                 code: this.code,
-                image: this.image
+                // image: this.image
             });
             console.warn(result);
             if (result.status == 201) {
@@ -73,6 +57,16 @@ export default {
                 localStorage.setItem("product-info", JSON.stringify(result.data))
                 this.$router.push({name:'Admin'});
             }
+        },
+
+        async reviewFiles(e) {
+            let file = e.target.files[0];
+            let reader = new FileReader();
+            // eslint-disable-next-line no-unused-vars
+            reader.onloadend = (file) => {
+                this.form.photo = reader.result;
+            }
+            reader.readAsDataURL(file);
         }
     },
     async mounted() {
@@ -83,7 +77,7 @@ export default {
             })
         }
 
-        let result = await axios.get("http://localhost:3000/list-product");
+        let result = await axios.get("http://localhost:3000/product-iphone");
         console.warn(result)
         this.listproduct = result.data;
     },

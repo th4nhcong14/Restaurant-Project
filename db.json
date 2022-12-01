@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "email": "cong@gmail.com",
       "name": "thanh cong",
+      "email": "cong@gmail.com",
       "password": "cong@123",
       "phonenumber": "0866630733",
       "id": 1
@@ -15,12 +15,6 @@
       "id": 2
     },
     {
-      "email": "ducong45@gmail.com",
-      "name": "duthanhcong",
-      "password": "cong123",
-      "id": 4
-    },
-    {
       "email": "dtc@gmail.com",
       "name": "dtc",
       "password": "123",
@@ -28,20 +22,78 @@
       "id": 5
     }
   ],
-  "list-product": [
+  "product-iphone": [
     {
       "name": "Iphone 14",
-      "price": "240000000",
+      "price": "799$",
       "code": "IP14",
-      "image": "https://cdn2.cellphones.com.vn/358x/media/catalog/product/t/_/t_m_12.png",
       "id": 1
     },
     {
-      "name": "Iphone 13",
-      "price": "2000000000",
-      "code": "IP13",
-      "image": "",
+      "name": "IPhone14 Promax",
+      "price": "999$",
+      "code": "IP14P",
       "id": 2
+    },
+    {
+      "name": "IPhone13",
+      "price": "499$",
+      "code": "IP13",
+      "id": 3
+    },
+    {
+      "name": "IPhone13Promax",
+      "price": "699$",
+      "code": "IP13Pm",
+      "id": 4
+    }
+  ],
+  "product-imac": [
+    {
+      "name": "IMac Pro 14",
+      "price": "1499$",
+      "code": "IMP14",
+      "id": 2
+    }
+  ],
+  "product-ipad": [
+    {
+      "name": "dd213",
+      "price": "213",
+      "code": "213",
+      "id": 1
+    }
+  ],
+  "product-airpods": [
+    {
+      "name": "sad",
+      "price": "dsa",
+      "code": "dsa",
+      "id": 1
+    }
+  ],
+  "cart": [],
+  "customers": [
+    {
+      "email": "dang@gmail.com",
+      "name": "Minh Dang ",
+      "phonenumber": "0866630733",
+      "address": "Can Tho",
+      "id": 1
+    },
+    {
+      "email": "vinh@gmail.com",
+      "name": "Hien Vinh",
+      "phonenumber": "0877787322",
+      "address": "Soc Trang",
+      "id": 2
+    },
+    {
+      "email": "thanh@gmail.com",
+      "name": "Thanh Le",
+      "phonenumber": "0909090909",
+      "address": "Vinh Long",
+      "id": 3
     }
   ]
 }
