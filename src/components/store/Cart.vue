@@ -15,10 +15,10 @@
                 <button class="update-btn" v-on:click="RemoveItem(item.id)">Remove</button>
             </tr>
         </table>
-        
     </div>
     <div>
         <button class="update-btn" v-on:click="Checkout()">Checkout</button>
+        <button class="update-btn" v-on:click="Return()">Return to Store</button>
     </div>
 </template>
 
@@ -31,25 +31,35 @@ export default {
     data() {
         return {
             name: '',
-            listproduct: []
+            listproduct: [],
+            email: '',
+            phonenumber: '',
+            address: '',
+            order: ''
         }
     },
-    methods:{
-        async RemoveItem(id){
-            let result = await axios.delete("http://localhost:3000/cart/"+id);
+    methods: {
+        async RemoveItem(id) {
+            let result = await axios.delete("http://localhost:3000/cart/" + id);
             console.warn(result)
-            if(result.status==200) {
+            if (result.status == 200) {
                 alert("Delete product successfully!")
-            }   
-            location.reload(); 
+            }
+            location.reload();
         },
 
-        async Checkout(){
+        async Checkout() {
             this.$router.push({
                 name: 'Order'
             })
-        }
+        },
+        async Return() {
+            this.$router.push({
+                name: 'Store'
+            })
+        },
     },
+
     async mounted() {
         let result = await axios.get("http://localhost:3000/cart")
         this.listproduct = result.data

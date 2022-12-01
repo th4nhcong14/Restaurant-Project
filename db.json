@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "name": "thanh cong",
-      "email": "cong@gmail.com",
-      "password": "cong@123",
-      "phonenumber": "0866630733",
-      "id": 1
-    },
-    {
       "name": "huy hoangg",
       "email": "hoang@gmail.com",
       "password": "123",
@@ -50,35 +43,83 @@
   ],
   "product-imac": [
     {
-      "name": "IMac Pro 14",
-      "price": "1499$",
-      "code": "IMP14",
+      "name": "MacBook Air M2",
+      "price": "1199$",
+      "code": "MBA M2",
       "id": 2
+    },
+    {
+      "name": "MacBook Air M1 ",
+      "price": "999$",
+      "code": "MBA M1",
+      "id": 3
+    },
+    {
+      "name": "MacBook Pro 13",
+      "price": "1299$",
+      "code": "MB PR13",
+      "id": 4
+    },
+    {
+      "name": "IMac 24",
+      "price": "$1299",
+      "code": "IM24",
+      "id": 5
     }
   ],
   "product-ipad": [
     {
-      "name": "dd213",
-      "price": "213",
-      "code": "213",
+      "name": "IPad Pro M1",
+      "price": "799$",
+      "code": "IPM1",
       "id": 1
+    },
+    {
+      "name": "IPad Pro M2",
+      "price": "799$",
+      "code": "IPM2",
+      "id": 2
+    },
+    {
+      "name": "IPad Air 5 M1",
+      "price": "599$",
+      "code": "IPAM1",
+      "id": 3
+    },
+    {
+      "name": "IPad 9 generation ",
+      "price": "449$",
+      "code": "IP Gen9",
+      "id": 4
     }
   ],
   "product-airpods": [
     {
-      "name": "sad",
-      "price": "dsa",
-      "code": "dsa",
+      "name": "AirPods 2nd generation",
+      "price": "129$",
+      "code": "APGen2",
       "id": 1
+    },
+    {
+      "name": "AirPods Pro (2nd generation)",
+      "price": "249$",
+      "code": "APro Gen2",
+      "id": 2
+    },
+    {
+      "name": "AirPods Pro (3rd generation)",
+      "price": "179$",
+      "code": "APro Gen3",
+      "id": 3
     }
   ],
   "cart": [],
   "customers": [
     {
-      "email": "dang@gmail.com",
       "name": "Minh Dang ",
-      "phonenumber": "0866630733",
-      "address": "Can Tho",
+      "email": "dang@gmail.com",
+      "phonenumber": "0808080880",
+      "address": "Hau Giang",
       "id": 1
     },
     {
@@ -94,6 +135,20 @@
       "phonenumber": "0909090909",
       "address": "Vinh Long",
       "id": 3
+    },
+    {
+      "email": "hao@gmail.com",
+      "name": "Duong Huynh Hao",
+      "phonenumber": "90213902193",
+      "address": "Hau Giang",
+      "id": 4
+    },
+    {
+      "email": "huyhoangfo34@gmail.com",
+      "name": "Huy Hoang",
+      "phonenumber": "0232321345",
+      "address": "Can Tho",
+      "id": 5
     }
   ]
 }

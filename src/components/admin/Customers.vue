@@ -46,7 +46,6 @@ export default {
     methods: {
         async deleteUser(id) {
             let result = await axios.delete("http://localhost:3000/customers/"+id);
-            console.warn(result)
             if(result.status==200) {
                 alert("Delete customer successfully!")
                 location.reload(); 

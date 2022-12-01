@@ -1,9 +1,9 @@
 <template>
     <header>
-        <a href="">IPhone</a>
-        <a href="">IMac</a>
-        <a href="">Ipad</a>
-        <a href="">AirPods</a>
+        <a href="#return-iphone">IPhone</a>
+        <a href="#return-imac">IMac</a>
+        <a href="#return-ipad">Ipad</a>
+        <a href="#return-airpods">AirPods</a>
         <div class="search-wrapper" style="font-size: 15pxpx;">
             <input type="search" v-model="search" placeholder="Search" />
         </div>
@@ -14,7 +14,7 @@
     </div>
 
     <h1 class="title">IPhone</h1>
-    <div class="iphone-test">
+    <div class="iphone-test" id="return-iphone">
         <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/t/_/t_m_12.png" alt="">
         <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/v/_/v_ng_12.png" alt="">
         <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/x/_/x_m_16.png" alt="">
@@ -43,11 +43,11 @@
     </div>
 
     <h1 class="title">IMac</h1>
-    <div class="iMac-test">
-        <img src="http://www.maccenter.vn/App_Images/iMac-5K-2020.jpg" alt="">
-        <img src="https://cdn.tgdd.vn/Products/Images/5698/238061/imac-24-icnh-2021-m1-thumb-bac-1-600x600.jpg" alt="">
-        <img src="https://expertreviews.b-cdn.net/sites/expertreviews/files/styles/gallery_adv/public/2021/05/m1_apple_imac_24in_review_-_0004.jpeg?itok=kSeWF-SR" alt="">
-        <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2021/03/iMac-2021-face-1.jpg" alt="">
+    <div class="iMac-test" id="return-imac">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202110?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1664576115052" alt="">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-air-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1653499620093" alt="">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-macbook-pro-13-202206?wid=600&hei=500&fmt=p-jpg&qlt=95&.v=1665082744007" alt="">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-card-40-imac-24-202108?wid=490&hei=500&fmt=jpeg&qlt=95&.v=1625868688000" alt="">
     </div>
     <div>
         <table class="product-table">
@@ -71,11 +71,11 @@
     </div>
 
     <h1 class="title">IPad</h1>
-    <div class="iMPad-test">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="iMPad-test" id="return-ipad">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-1-202210?wid=364&hei=333&fmt=png-alpha&.v=1664477161220" alt="">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-1-202210?wid=364&hei=333&fmt=png-alpha&.v=1664477161220" alt="">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-digitalmat-gallery-1-202210?wid=364&hei=333&fmt=png-alpha&.v=1664392871297" alt="">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-digitalmat-gallery-1-202111?wid=365&hei=333&fmt=png-alpha&.v=1635183151000" alt="">
     </div>
     <div>
         <table class="product-table">
@@ -99,9 +99,12 @@
     </div>
 
     <h1 class="title">AirPods</h1>
-    <div class="airpods-test">
-
-    </div>
+    <div class="airpods-test" id="return-airpods">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MV7N2?wid=532&hei=582&fmt=png-alpha&.v=1551489688005" alt="">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=445&hei=445&fmt=jpeg&qlt=95&.v=1632861342000" alt="">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=532&hei=582&fmt=png-alpha&.v=1660803972361" alt="">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=445&hei=445&fmt=jpeg&qlt=95&.v=1660803972361" alt="">
+        </div>
     <div>
         <table class="product-table">
             <tr>
@@ -267,11 +270,20 @@ input {
 }
 
 .iMac-test {
-    display:block;
+    display:flex;
+    margin: auto ;
+    justify-content: center;
+    width: 50%;
+    padding-top: 30px;
+    object-fit: cover;
+}
+.airpods-test {
+    display: flex;
     margin: auto;
     justify-content: center;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     padding-top: 30px;
+    object-fit: cover   ;
 }
-
 </style>

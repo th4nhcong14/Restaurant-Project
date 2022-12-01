@@ -9,6 +9,7 @@
                 <input type="text" v-model="phonenumber" placeholder="Enter Phone Number" />
                 <input type="text" v-model="address" placeholder="Enter Address">
                 <button class="btn" v-on:click="Order()">Order</button>
+                <button class="bnt" v-on:click="ReturnCart()">Return to Cart</button>
             </div>
         </div>
     </main>
@@ -26,18 +27,22 @@ export default {
             name: '',
             email: '',
             phonenumber: '',
-            address: ''
+            address: '',
+            order:'',
+            listorder:[]
         }
     },
     methods: {
         async Order() {
-            let result = await axios.post("http://localhost:3000/customers", {
+            let result = await axios.get("http://localhost:3000/cart")
+            this.listorder = result.data;
+
+            result = await axios.post("http://localhost:3000/customers", {
                 email: this.email,
                 name: this.name,
                 phonenumber: this.phonenumber,
-                address: this.address
+                address: this.address,
             });
-
 
             console.warn(result);
             if (result.status == 201) {
@@ -47,7 +52,12 @@ export default {
                 })
 
             }
+        },
+        async ReturnCart(){
+            this.$router.push ({
+                name: 'Cart'
+            })
         }
-    }
+    },
 }
 </script>

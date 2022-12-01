@@ -4,10 +4,10 @@
     <div class="update">
      <h1>Update Customers</h1>
      <input type="text" v-model="listProduct.name">
-     <input type="text" v-model="listProduct.email">
+     <input type="email" v-model="listProduct.email">
      <input type="text" v-model="listProduct.phonenumber">
      <input type="text" v-model="listProduct.address">
-     <button v-on:click="updateProduct" class="btn">Update</button>
+     <button v-on:click="updateCustomers" class="btn">Update</button>
     </div>
 </template>
 
@@ -32,13 +32,14 @@ export default {
         }
     },
     methods: {
-        async updateProduct() {
+        async updateCustomers() {
             console.warn(this.listProduct)
             const result = await axios.put('http://localhost:3000/customers/'+this.$route.params.id,
             {
                 name:this.listProduct.name,
-                price:this.listProduct.price,
-                code:this.listProduct.code,
+                email:this.listProduct.email,
+                phonenumber:this.listProduct.phonenumber,
+                address:this.listProduct.address
             });
                        
             if(result.status==200) {

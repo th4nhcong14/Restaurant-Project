@@ -1,4 +1,3 @@
-eslint-disable vue/no-unused-components
 <template>
     <Header />
     <div>
@@ -182,7 +181,7 @@ export default {
 
    async mounted() {
         let user = localStorage.getItem('user-info')
-        // this.name = JSON.parse(user).name
+        this.name = JSON.parse(user).name
         if (!user) {
             this.$router.push({
                 name: 'Login'

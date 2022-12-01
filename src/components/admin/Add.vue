@@ -33,6 +33,7 @@ export default {
             listproduct: [],
         }
     },
+    
     methods: {
         async deleteProduct(id) {
             let result = await axios.delete("http://localhost:3000/product-iphone/"+id);
